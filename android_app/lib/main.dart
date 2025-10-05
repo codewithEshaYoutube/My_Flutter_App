@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             child: Icon(
               Icons.favorite,
               color: const Color.fromARGB(255, 242, 104, 150),
-              size:65
+              size:65  
             ),
           ),
         ),
