@@ -18,13 +18,13 @@ class MyApp extends StatelessWidget {
             width: 200,
             decoration: BoxDecoration(
               color: Colors.deepOrange,
-              borderRadius: BorderRadius.circular(4)
+              borderRadius: BorderRadius.circular(20)
             ),
             padding: EdgeInsets.all(20),
             child: Icon(
               Icons.favorite,
               color: const Color.fromARGB(255, 242, 104, 150),
-              size:64
+              size:65
             ),
           ),
         ),
