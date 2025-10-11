@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -18,13 +19,28 @@ class MyApp extends StatelessWidget {
             width: 200,
             decoration: BoxDecoration(
               color: Colors.deepOrange,
-              borderRadius: BorderRadius.circular(20)
+              borderRadius: BorderRadius.circular(20),
             ),
-            padding: EdgeInsets.all(20),
-            child: Icon(
-              Icons.favorite,
-              color: const Color.fromARGB(255, 242, 104, 150),
-              size:65     
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Icon(
+                  Icons.book,
+                  color: Color.fromARGB(255, 58, 4, 22),
+                  size: 65,
+                ),
+                SizedBox(height: 20),
+                Text(
+                  'Department of\nSoftware Engineering',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ),
         ),
