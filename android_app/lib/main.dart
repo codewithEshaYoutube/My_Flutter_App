@@ -14,37 +14,36 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.deepPurple,
         body: Center(
-          child: Container(
-            height: 300,
-            width: 200,
-            decoration: BoxDecoration(
-              color: Colors.deepOrange,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(
-                  Icons.book,
-                  color: Color.fromARGB(255, 58, 4, 22),
-                  size: 65,
-                ),
-                SizedBox(height: 20),
-                Text(
-                  'Department of\nSoftware Engineering',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
+        child: ListView(
+          children:[
+            Padding(
+              padding: const EdgeInsets.all(0.8),
+            child:Text("start",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
+            Padding(
+              padding: const EdgeInsets.all(0.8),
+            child:Text("zero",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
+            Padding(
+              padding: const EdgeInsets.all(0.8),
+            child:Text("One",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
+            Padding(
+              padding: const EdgeInsets.all(0.8),
+            child:Text("two",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
+            Padding(
+              padding: const EdgeInsets.all(0.8),
+            child:Text("three",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
+            Padding(
+              padding: const EdgeInsets.all(0.8),
+            child:Text("four",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
+            Padding(
+              padding: const EdgeInsets.all(0.8),
+            child:Text("five",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
+
+
+          ]
             ),
           ),
         ),
-      ),
-    );
+      );
+    
   }
-}
+  }
