@@ -1,49 +1,65 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.deepPurple,
-        body: Center(
-        child: ListView(
-          children:[
-            Padding(
-              padding: const EdgeInsets.all(0.8),
-            child:Text("start",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
-            Padding(
-              padding: const EdgeInsets.all(0.8),
-            child:Text("zero",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
-            Padding(
-              padding: const EdgeInsets.all(0.8),
-            child:Text("One",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
-            Padding(
-              padding: const EdgeInsets.all(0.8),
-            child:Text("two",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
-            Padding(
-              padding: const EdgeInsets.all(0.8),
-            child:Text("three",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
-            Padding(
-              padding: const EdgeInsets.all(0.8),
-            child:Text("four",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
-            Padding(
-              padding: const EdgeInsets.all(0.8),
-            child:Text("five",style:TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),),
+      title: 'Flutter TabBar Example',
+      theme: ThemeData(primarySwatch: Colors.teal),
+      home: MyTabBarScreen(),
+    );
+  }
+}
 
-
-          ]
-            ),
+class MyTabBarScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 3, // Number of tabs
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('TabBar Example'),
+          centerTitle: true,
+          bottom: TabBar(
+            indicatorColor: Colors.white,
+            labelColor: Colors.white,
+            unselectedLabelColor: Colors.white70,
+            labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            tabs: const [
+              Tab(icon: Icon(Icons.home), text: 'Home'),
+              Tab(icon: Icon(Icons.person), text: 'Profile'),
+              Tab(icon: Icon(Icons.settings), text: 'Settings'),
+            ],
           ),
         ),
-      );
-    
+        body: const TabBarView(
+          children: [
+            Center(
+              child: Text(
+                '🏠 Home Screen',
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Center(
+              child: Text(
+                '👤 Profile Screen',
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Center(
+              child: Text(
+                '⚙️ Settings Screen',
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
-  }
+}
