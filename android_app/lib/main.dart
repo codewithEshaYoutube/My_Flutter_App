@@ -20,14 +20,14 @@ class HomePage extends StatelessWidget {
             begin: Alignment.topLeft,
             colors: [
               Colors.blue.shade100,
-              const Color.fromARGB(255, 170, 205, 233),
+            Colors.blue.shade300,
               Colors.blue.shade900
             ]
           )
         ),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 80),
+            SizedBox(height: 50),
             
             // top section
             Padding(
@@ -46,13 +46,18 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10),
-                  Text(
+                  Padding(
+                      padding:EdgeInsets.only(left: 30),
+                  child: Text(
                     "Welcome back to app ", 
                     style: TextStyle(
+                      
                       color: Colors.white,
                       fontSize: 18
                     ),
-                  )
+                    ),
+                  ),
+
                 ],
               ),
             ),
@@ -63,12 +68,14 @@ class HomePage extends StatelessWidget {
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.white30,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30)
                   ),
                 ),
+                
+      child: SingleChildScrollView( 
                 child: Padding(
                   padding: EdgeInsets.all(30),
                   child: Column(
@@ -78,16 +85,12 @@ class HomePage extends StatelessWidget {
                       // Email Field
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.white30,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.blue.shade100,
-                              blurRadius: 10,
-                              offset: Offset(0, 5)
-                            )
-                          ]
+                          
                         ),
+
+
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: "Enter your email/phone number",
@@ -99,12 +102,12 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       
-                      SizedBox(height: 20),
+                      SizedBox(height: 10),
                       
                       // Password Field
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                  color: Colors.white,
 
                           borderRadius: BorderRadius.circular(5),
                           
@@ -121,7 +124,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       
-                      SizedBox(height: 20),
+                      SizedBox(height: 15),
                       
                       // Forgot Password
                       Align(
@@ -129,13 +132,13 @@ class HomePage extends StatelessWidget {
                         child: Text(
                           "Forgot Password?",
                           style: TextStyle(
-                            color: Colors.blue.shade700,
+                            color: const Color.fromARGB(255, 4, 4, 4),
                             fontWeight: FontWeight.w500
                           ),
                         ),
                       ),
                       
-                      SizedBox(height: 40),
+                      SizedBox(height: 30),
                       
                       // Login Button
                       Container(
@@ -162,7 +165,7 @@ class HomePage extends StatelessWidget {
                           child: Text(
                             "LOGIN ",
                             style: TextStyle(
-                              color: Colors.white,
+                              color: const Color.fromARGB(255, 248, 248, 248),
                               fontSize: 18,
                               fontWeight: FontWeight.bold
                             ),
@@ -177,7 +180,9 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             )
+            ),
           ],
+        
         ),
       ),
     );
