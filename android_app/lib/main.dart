@@ -64,7 +64,7 @@ class HomePage extends StatelessWidget {
             
             SizedBox(height: 20),
             
-            // Login Section
+            //  login section decoration
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
@@ -82,7 +82,7 @@ class HomePage extends StatelessWidget {
                     children: <Widget>[
                       SizedBox(height: 20),
                       
-                      // Email Field
+                      // Email box field
                       Container(
                         decoration: BoxDecoration(
                           color: Colors.white30,
@@ -140,7 +140,7 @@ class HomePage extends StatelessWidget {
                       
                       SizedBox(height: 30),
                       
-                      // Login Button
+                      // login button styling and border
                       Container(
                         width: double.infinity,
                         height: 50,
